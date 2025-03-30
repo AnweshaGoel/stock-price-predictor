@@ -22,6 +22,7 @@ start_date = st.sidebar.date_input("Start Date", datetime.date(2015, 1, 1))
 prediction_days = st.sidebar.slider("Days to Use for Prediction", 30, 300, 60)
 future_days = st.sidebar.slider("Days to Predict into Future", 1, 30, 7)
 
+#caches output
 @st.cache_data
 def load_data(ticker, start_date):
     end_date = datetime.datetime.now().date()
